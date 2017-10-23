@@ -17,7 +17,7 @@
          title = #{title,jdbcType=VARCHAR},
          price = #{price,jdbcType=DOUBLE},
          key1 = #{key1,jdbcType=VARCHAR},
-         key2 = #{key1,jdbcType=VARCHAR}
+         key2 = #{key1,jdbcType=VARCHAR},
 		 description = #{description,jdbcType=VARCHAR},
         WHERE productCode = #{productCode,jdbcType=VARCHAR}
     </select>

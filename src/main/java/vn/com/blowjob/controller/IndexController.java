@@ -267,28 +267,22 @@ public class IndexController {
 
                 asin = codeList[0];
 
-                //if (driver.findElements(By.xpath("//*[@id=\"brand\"]")).size() > 0) {
-                if (!driver.findElements(By.xpath("//*[@id=\"brand\"]")).isEmpty()) {
+                if (driver.findElements(By.xpath("//*[@id=\"brand\"]")).size() > 0) {
                     branch = driver.findElement(By.xpath("//*[@id=\"brand\"]")).getText();
                 }
-                //if (driver.findElements(By.xpath("//*[@id=\"productTitle\"]")).size() > 0) {
-                if (!driver.findElements(By.xpath("//*[@id=\"productTitle\"]")).isEmpty()) {
+                if (driver.findElements(By.xpath("//*[@id=\"productTitle\"]")).size() > 0) {
                     title = driver.findElement(By.xpath("//*[@id=\"productTitle\"]")).getText();
                 }
-                //if (driver.findElements(By.xpath("//*[@id=\"priceblock_ourprice\"]")).size() > 0) {
-                if (!driver.findElements(By.xpath("//*[@id=\"priceblock_ourprice\"]")).isEmpty()) {
+                if (driver.findElements(By.xpath("//*[@id=\"priceblock_ourprice\"]")).size() > 0) {
                     price = Double.parseDouble(driver.findElement(By.xpath("//*[@id=\"priceblock_ourprice\"]")).getText().substring(1,6));
                 }
-                //if (driver.findElements(By.xpath("//*[@id=\"feature-bullets\"]/ul/li[4]/span")).size() > 0) {
-                if (!driver.findElements(By.xpath("//*[@id=\"feature-bullets\"]/ul/li[4]/span")).isEmpty()) {
+                if (driver.findElements(By.xpath("//*[@id=\"feature-bullets\"]/ul/li[4]/span")).size() > 0) {
                     key1 = driver.findElement(By.xpath("//*[@id=\"feature-bullets\"]/ul/li[4]/span")).getText();
                 }
-                //if (driver.findElements(By.xpath("//*[@id=\"feature-bullets\"]/ul/li[5]/span")).size() > 0) {
-                if (!driver.findElements(By.xpath("//*[@id=\"feature-bullets\"]/ul/li[5]/span")).isEmpty()) {
+                if (driver.findElements(By.xpath("//*[@id=\"feature-bullets\"]/ul/li[5]/span")).size() > 0) {
                     key2 = driver.findElement(By.xpath("//*[@id=\"feature-bullets\"]/ul/li[5]/span")).getText();
                 }
-                //if (driver.findElements(By.xpath("//*[@id=\"productDescription\"]/p")).size() > 0) {
-                if (!driver.findElements(By.xpath("//*[@id=\"productDescription\"]/p")).isEmpty()){
+                if (driver.findElements(By.xpath("//*[@id=\"productDescription\"]/p")).size() > 0) {
                     description = driver.findElement(By.xpath("//*[@id=\"productDescription\"]/p")).getText();
                 }
                 Product product = new Product(asin, branch, title, price, key1, key2, description);
